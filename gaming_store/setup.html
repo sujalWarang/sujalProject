@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Gaming Setup</title>
+    <link rel="stylesheet" href="setup.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Gaming Store</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="compare.html">Compare</a></li>
+                <li><a href="setup.html" class="active">Custiamza Setup</a></li>
+                <li><a href="help.html">Help</a></li>
+            </ul>
+        </nav>
+    <div class="search-bar">
+        <input type="text" placeholder="Search products...">
+        <button>Search</button>
+    </div>
+    <div class="user-actions">
+   
+        <a href="login.html"><button id="signInButton">Sign In</button></a>
+
+    </div>
+    </header>
+
+    <main>
+        <section class="setup-options">
+            <h1>Build Your Gaming Setup</h1>
+            <div class="tabs">
+                <button class="tab-button active" onclick="showTab('prebuilt')">Pre-Built Setups</button>
+                <button class="tab-button" onclick="showTab('custom-setup.html')">Customize Your Setup</button>
+            </div>
+
+            <!-- Pre-built Setups -->
+            <div id="prebuilt" class="tab-content active">
+                <div class="prebuilt-container">
+                    <div class="setup-card">
+                        <h3>Basic Setup</h3>
+                        <img src="images/basicSetUP.jpeg" alt="Basic Setup">
+                        <p>Includes monitor, keyboard, and mouse.</p>
+                        <p class="price">$499.99</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="setup-card">
+                        <h3>Advanced Setup</h3>
+                        <img src="images/advancesetup.jpeg" alt="Advanced Setup">
+                        <p>Includes gaming PC, mechanical keyboard, gaming mouse, and headset.</p>
+                        <p class="price">$1,299.99</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="setup-card">
+                        <h3>Pro Setup</h3>
+                        <img src="images/pro setup.jpeg" alt="Pro Setup">
+                        <p>High-end gaming PC, 144Hz monitor, RGB keyboard, gaming mouse, headset, and ergonomic chair.</p>
+                        <p class="price">$2,499.99</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom Setup -->
+            <div id="custom" class="tab-content">
+                <h2>Customize Your Own Setup</h2>
+                <form id="custom-setup-form">
+                    <label for="monitor">Monitor:</label>
+                    <select id="monitor">
+                        <option value="monitor1" data-price="199.99">24" 144Hz Gaming Monitor - $199.99</option>
+                        <option value="monitor2" data-price="349.99">27" 240Hz Curved Monitor - $349.99</option>
+                    </select>
+
+                    <label for="keyboard">Keyboard:</label>
+                    <select id="keyboard">
+                        <option value="keyboard1" data-price="79.99">Mechanical RGB Keyboard - $79.99</option>
+                        <option value="keyboard2" data-price="129.99">Premium Mechanical Keyboard - $129.99</option>
+                    </select>
+
+                    <label for="mouse">Mouse:</label>
+                    <select id="mouse">
+                        <option value="mouse1" data-price="49.99">Wireless Gaming Mouse - $49.99</option>
+                        <option value="mouse2" data-price="79.99">Ultra-Light Gaming Mouse - $79.99</option>
+                    </select>
+
+                    <label for="headset">Headset:</label>
+                    <select id="headset">
+                        <option value="headset1" data-price="99.99">Surround Sound Gaming Headset - $99.99</option>
+                        <option value="headset2" data-price="149.99">Premium Noise Cancelling Headset - $149.99</option>
+                    </select>
+
+                    <div class="total-price">
+                        <p>Total Price: $<span id="totalPrice">0.00</span></p>
+                    </div>
+
+                    <button type="button" class="add-to-cart" onclick="window.location.href='custom-setup.html'">Customize Your Setup</button>
+
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Gaming Store. All rights reserved.</p>
+    </footer>
+
+    <script src="setup.js"></script>
+</body>
+</html>
